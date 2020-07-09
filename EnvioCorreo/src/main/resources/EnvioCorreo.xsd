@@ -1,0 +1,31 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="http://sistemasdistribuidos.com/soap/api/enviocorreo"
+            targetNamespace="http://sisdistribuidos.com/soap/api/enviocorreo"
+            elementFormDefault="qualified">
+       
+       <xs:element name="getEnvioCorreoRequest">
+       	<xs:complexType>
+       		<xs:sequence>
+       			<xs:element name="usuario" type="xs:string" />
+       			<xs:element name="codUsuario" type="xs:string" />
+       			<xs:element name="nroOperacion" type="xs:string" />
+       			<xs:element name="fecha" type="xs:string" />
+        	    <xs:element name="monto" type="xs:string" />      			
+       			<xs:element name="destinatario" type="xs:string" />
+       			<xs:element name="asunto" type="xs:string" />
+       			<xs:element name="mensaje" type="xs:string" />	
+       		</xs:sequence>
+       	</xs:complexType>
+       </xs:element>
+       
+       <xs:element name="getEnvioCorreoResponse">
+       	<xs:complexType>
+       		<xs:sequence>
+       			<xs:element name="codidoRespuesta" type="xs:string" />
+       			<xs:element name="mensajeRespuesta" type="xs:string" />
+       		</xs:sequence>
+       	</xs:complexType>
+       </xs:element>
+       
+            
+</xs:schema>            
